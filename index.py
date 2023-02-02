@@ -12,7 +12,7 @@ chosen_max_frets = int(input("How many frets? "))
 fret_numbers = range(0, chosen_max_frets + 1)
 
 # list of the note names
-note_names = ["a", "a sharp", "b", "c", "C sharp", "d", "d sharp", "e", "f", "f sharp", "g", "g sharp"]
+note_names = ["a", "a sharp", "b", "c", "c sharp", "d", "d sharp", "e", "f", "f sharp", "g", "g sharp"]
 
 
 # Continuously run the CLI script
