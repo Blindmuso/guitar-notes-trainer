@@ -2,8 +2,14 @@ import random
 
 # List of strings on a standard guitar
 string_names = ['e', 'a', 'd', 'g', 'b', 'e']
+
+# Ask the user which string they would like to practice
+one_string = input("Which string to practice (e, a, d, g, b or e)? ")
+# Ask the user how many frets they would like to practice
+chosen_max_frets = int(input("How many frets? "))
+
 # list of frets on the guitar
-fret_numbers = range(0, 12)
+fret_numbers = range(0, chosen_max_frets + 1)
 
 # list of the note names
 note_names = ["a", "a sharp", "b", "c", "C sharp", "d", "d sharp", "e", "f", "f sharp", "g", "g sharp"]
@@ -13,7 +19,7 @@ note_names = ["a", "a sharp", "b", "c", "C sharp", "d", "d sharp", "e", "f", "f 
 # to asks a question after question 
 while True:
 	# Select a random string and fret number from the guitar
-	selected_string = random.choice(string_names)
+	selected_string = one_string
 	selected_fret = random.choice(fret_numbers)
 	# Calculate what that note would be
 	root_num = note_names.index(selected_string)
