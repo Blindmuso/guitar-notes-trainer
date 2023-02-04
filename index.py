@@ -4,7 +4,7 @@ import random
 string_names = ['e', 'a', 'd', 'g', 'b', 'e']
 
 # Ask the user which string they would like to practice
-chosen_string = input("Which string to practice (e, a, d, g, b or e)? ")
+chosen_string = input("Which string to practice (e, a, d, g, b, e or all")
 # Ask the user how many frets they would like to practice
 chosen_max_frets = int(input("How many frets? "))
 
@@ -22,8 +22,13 @@ note_names_with_flats = ["a", "b flat", "b", "c", "d flat", "d", "e flat", "e", 
 # to asks a question after question 
 while True:
 	# Select a random string and fret number from the guitar
-	selected_string = chosen_string
+	selected_string = random.choice(string_names)
 	selected_fret = random.choice(fret_numbers)
+
+	# make the exception if one string was chosen 
+	if (chosen_string != "all"):
+		selected_string = chosen_string
+
 	# Calculate what that note would be
 	root_num = note_names_with_sharps.index(selected_string)
 	correct_note_with_sharps = note_names_with_sharps[((root_num +  selected_fret) % 12)]  
