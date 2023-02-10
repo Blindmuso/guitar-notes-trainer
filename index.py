@@ -1,8 +1,4 @@
 import random
-
-# List of strings on a standard guitar
-string_names = ['e', 'a', 'd', 'g', 'b', 'e']
-
 # Ask the user which string they would like to practice
 chosen_string = input("Which string to practice (e, a, d, g, b, e or all")
 # Ask the user how many frets they would like to practice
@@ -33,8 +29,10 @@ while True:
 	root_num = note_names_with_sharps.index(selected_string)
 	correct_note_with_sharps = note_names_with_sharps[((root_num +  selected_fret) % 12)]  
 	correct_note_with_flats  = note_names_with_flats[((root_num + selected_fret) % 12)]
-	# Let the user guess to see if they know the answer
-	user_guess = input("What is the note at " + selected_string + str(selected_fret))
+	# Speak the question to the user and let them guess
+	question = "What is the note at " + selected_string + str(selected_fret) + "? "
+
+	user_guess = input(question)
 	# Validate the user's guess and check if it was correct
 	# if it is not, then tell the user what the correct answer was
 	if ((user_guess == correct_note_with_sharps) or (user_guess == correct_note_with_flats)):
