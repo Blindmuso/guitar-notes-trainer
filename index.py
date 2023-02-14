@@ -1,5 +1,9 @@
-import random
+import random# string names on a standard guitar
+string_names = ["e", "a", "d", "g", "b", "e"]
+
+
 # Ask the user which string they would like to practice
+
 chosen_string = input("Which string to practice (e, a, d, g, b, e or all")
 # Ask the user how many frets they would like to practice
 chosen_max_frets = int(input("How many frets? "))
